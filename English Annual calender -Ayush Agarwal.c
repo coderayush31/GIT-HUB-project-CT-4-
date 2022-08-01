@@ -56,18 +56,18 @@ void print_calendar(int year, int daycode)
 			printf(" ");
 		}
 		
-		// For loop from day 1 to last day of month,for printing all the dates for one month
+		
 		for ( day = 1; day <= month_days[month]; day++ )
 		{
 			printf("%2d", day );
 			
-			// Checking if day before Saturday, otherwise start next line from Sunday.
+			
 			if ( ( day + daycode ) % 7 > 0 )
 				printf("   " );
 			else
 				printf("\n " );
 		}
-			// Here setting position for next month, according to the daycode
+			
 			daycode = ( daycode + month_days[month] ) % 7;
 	}
 }
